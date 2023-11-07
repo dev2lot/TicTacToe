@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/b2e3245793.js" crossorigin="anonymous"></script>
+    </script>
+</head>
+
+<body>
+    <main>
+        <!-- turn indicator -->
+        <div class="grid">
+            <div class="turn yellow" data-id="turn">
+                <i class="fa-solid fa-xmark"></i>
+                <p>Player1 your'e up!</p>
+            </div>
+            <!-- dropdown actions menu  -->
+            <div class="action">
+                <button class="menu-btn" data-id="menu-button">
+                    Actions
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="items border hidden" data-id="menu-popover">
+                    <button data-id="reset-btn">Reset</button>
+                    <button data-id="new-round-btn">New Round</button>
+                </div>
+            </div>
+            <!-- grid play-boxes -->
+            <div id="1" class="square shadow" l data-id='squares'></div>
+            <div id="2" class="square shadow" l data-id='squares'></div>
+            <div id="3" class="square shadow" l data-id='squares'></div>
+            <div id="4" class="square shadow" l data-id='squares'></div>
+            <div id="5" class="square shadow" l data-id='squares'></div>
+            <div id="6" class="square shadow" l data-id='squares'></div>
+            <div id="7" class="square shadow" l data-id='squares'></div>
+            <div id="8" class="square shadow" l data-id='squares'></div>
+            <div id="9" class="square shadow" l data-id='squares'></div>
+
+
+            <div class="score" style="background-color:	var(--turquoise);">
+                <p>Player 1</p>
+                <span data-id="player1-status">0 Wins</span>
+            </div>
+            <div class="score" style="background-color: var(--light-gray);">
+                <p>Ties</p>
+                <span data-id="ties">0</span>
+            </div>
+            <div class="score" style="background-color: var(--yellow);">
+                <p>Player 2</p>
+                <span data-id="player2-status">0 Wins</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>A begineer project in HTML CSS JS and TypeScript.</p>
+        <p>Originally done by DEV LOT</p>
+        <p>
+            Learnt from and implemented along with <a href="https://www.zachgollwitzer.com/"> Zach Gollwitzer</a>
+            <br>
+            Credit and thanks to <a href="https://www.freecodecamp.org/">FreeCodeCamp.org</a>
+        </p>
+    </footer>
+
+    <!-- Modal class a pop-up for winner declaration -->
+    <div class="modal hidden" data-id="modal">
+        <div class="modal-contents">
+            <p data-id="modal-text">Player 1 Wins</p>
+            <button data-id="modal-btn">Play Again</button>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
